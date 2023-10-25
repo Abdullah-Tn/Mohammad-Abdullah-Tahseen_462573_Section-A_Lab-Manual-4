@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+cout<<" "<<endl;  //finding sum of the digits of a number
+cout<<"Task 2:-"<<endl; 
+int num, a; //declared num and a as integers
+cout<<"Please enter your number"<<endl; 
+cin>>num; 
+//if-else statement to diffrenciate between positive and negative integers
+if(num>=0){
+//loop in order to find value of each digit by mathematical operations inside the loop and adding the values each time
+for(int i; i>0, i++;)  
+{
+
+a = a + num%10;
+//the remainder of a number when divided by 10 will be equal to the value of the 1st digit from the right
+num = num/10; 
+//as num is declared as an int variable, so decimal is not considered after division by 10
+//the loop will function up until the num has 1 digit left 
+if(num<=0)
+{break;}  //the loop breaks and output a is displayed 
+}  
+cout<<"The sum of the digits of the number is:-"<<endl; 
+cout<<a<<endl;
+}
+//my code only works for non-negative numbers. 
+//to make this work for negative integers, the absolute value function will have to be introduced
+else {cout<<"Please enter a non-negative number"<<endl;
+}
+//end of task 2 
+
+cout<<"Task 3:- "<<endl;  //to check whether a number is prime or not
+int p, q; 
+cout<<"Please enter your number:-"<<endl; 
+cin>>p; 
+//an if-else statment is used for number that are neither prime nor composite (integers less than and equal to 1)
+if(p<=1){cout<<"Your number is neither prime nor composite";}
+else {
+//after all positive numbers greater than 1 are separated, a loop is made to find the reminder of a number when divided to each possible number
+for(int n=2; n<=p/2, n++;)
+{
+q=p%n;
+//if remainder at any moment becomes equal to 0, this means number is composite
+if(q==0)
+{cout<<"Your number is composite"<<endl;
+ break;}  //break ends the loop
+if(n<=p/2)
+continue; //continue the loop wihtout displaying output in order to check for all values and remainders
+//if all remainders are not equal to 0, then the following output will be displayed
+ cout<<"Your number is prime"<<endl;
+ break;
+}
+}
+//end of task 3
+return 0;
+}

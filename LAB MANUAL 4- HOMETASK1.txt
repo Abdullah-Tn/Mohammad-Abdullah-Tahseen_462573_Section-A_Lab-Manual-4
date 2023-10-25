@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std; 
+int main(){
+	
+cout<<"Task 1:-"<<endl; 
+//A for loop is used to run the first 150 natural numbers.
+for (int b=1; b<=150; b++)
+{
+//An if-continue statemet is used to skip multiples of 10.
+ if(b%10==0)
+ continue;
+//continue skips the next output line and again runs the loop
+ cout<<b<<" ";
+
+}
+//end of task 1
+}
