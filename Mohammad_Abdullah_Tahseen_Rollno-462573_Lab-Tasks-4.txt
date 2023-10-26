@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std; 
+int main()
+{   cout<<"TASK 1:-"<<endl;
+	int i;
+	int y=0, sum1=0;
+	cout<<"Enter the numbers one by one";
+	for(i=0; i<=9; i++)
+	{
+	cin>>y;
+    
+	
+	sum1 = sum1 + y;
+	y+=1;
+		
+}
+cout<<"The sum of first 10 natural numbers is"<<endl;
+ cout<<sum1<<endl;
+
+//end of task1 
+
+    cout<<"TASK 2:-"<<endl; 
+cout<<"Enter the number to create the table"<<endl; 
+int A, B; 
+cin>>A;
+for(B=0; B<11; B++)
+{
+int C; 
+C = A*B;
+cout<< A<< 'x' <<B << '='<<C<<endl;  
+}
+
+//end of task2 
+
+    cout<<"TASK 3:- "<<endl; 
+    
+int p, q, r=1;
+cout<<"The number p whose factorial is to be found is:- "<<endl; 
+cin>>p;
+
+for(q=1; q<=p; q++)
+{ 
+r = r*q; 
+}
+
+cout<<"Factorial of the number is "<<r<<endl;
+
+//end of task 3
+
+cout<<"TASK 4: -"<<endl; 
+
+int a, b, c, sum; 
+cout<<"The first two numbers are:- "<<endl;
+cin>>a >> b;
+cout<<"The Fibonacci sequence is:- "; 
+cout<<a<<","<<b;
+for(c=0; c<=8; c++)
+{
+
+sum= a+b;
+cout<<","<<sum;
+a=b;
+b=sum; 
+
+}
+//end of task 4
+
+return 0;
